@@ -14,6 +14,7 @@ import android.os.StrictMode;
 import android.util.Base64;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ZoomControls;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class PhotoActivity extends Activity {
     private ImageView photo;
 
     private ImageButton closeBtn;
+    private ImageButton zoomCtrl;
     private ImageButton shareBtn;
     private ProgressBar loadingBar;
 
@@ -142,6 +144,7 @@ public class PhotoActivity extends Activity {
     private void findViews() {
         // Buttons first
         closeBtn = (ImageButton) findViewById(getApplication().getResources().getIdentifier("closeBtn", "id", getApplication().getPackageName()));
+        zoomCtrl = (ImageButton) findViewById(getApplication().getResources().getIdentifier("pinchZoom", "id", getApplication().getPackageName()));
         shareBtn = (ImageButton) findViewById(getApplication().getResources().getIdentifier("shareBtn", "id", getApplication().getPackageName()));
 
         //ProgressBar
